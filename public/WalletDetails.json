@@ -1,0 +1,11 @@
+[
+    {
+        "accountNumber": "1000",
+        "userName": "karan_test",
+        "electricityID": "12345",
+        "mobileNumber": "9999999999",
+        "panCardNumber": "cccccccccc",
+        "gasPipeLineId": "8989",
+        "emailId": "test@db.com"
+    }
+]

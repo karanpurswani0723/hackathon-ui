@@ -60,8 +60,8 @@ render() {
             <Form.Item
             label={
                 <span>
-                Account Number to Transfer&nbsp;
-                <Tooltip title="Receipient's Account Number">
+                Account Number&nbsp;
+                <Tooltip title="Account Number">
                     <Icon type="user" />
                 </Tooltip>
                 </span>
@@ -90,43 +90,31 @@ render() {
             <Form.Item
             label={
                 <span>
-                Carbon Credits to Transfer&nbsp;
-                <Tooltip title="Carbon Credits to Transfer">
-                    <Icon type="dollar" />
+                Description&nbsp;
+                <Tooltip title="description">
+                    <Icon type="form" />
                 </Tooltip>
                 </span>
             }
             >
-            {getFieldDecorator('carbon', {
-                rules: [{ required: true, message: 'Please input carbon credits', whitespace: true }],
+            {getFieldDecorator('description', {
+                rules: [{ required: true, message: 'Please input description', whitespace: true }],
             })(<Input />)}
             </Form.Item>
 
-            <Form.Item label="Password" hasFeedback>
-            {getFieldDecorator('password', {
-                rules: [
-                {
-                    required: true,
-                    message: 'Please input your password!',
-                },
-                {
-                    validator: this.validateToNextPassword,
-                },
-                ],
-            })(<Input.Password />)}
-            </Form.Item>
-
-            <Form.Item label="Captcha" extra="We must make sure that your are a human.">
-            <Row gutter={8}>
-                <Col span={12}>
-                {getFieldDecorator('captcha', {
-                    rules: [{ required: true, message: 'Please input the captcha you got!' }],
-                })(<Input />)}
-                </Col>
-                <Col span={12}>
-                <Button>Get captcha</Button>
-                </Col>
-            </Row>
+            <Form.Item
+            label={
+                <span>
+                Category&nbsp;
+                <Tooltip title="Category">
+                    <Icon type="tags" />
+                </Tooltip>
+                </span>
+            }
+            >
+            {getFieldDecorator('category', {
+                rules: [{ required: true, message: 'Please input Category', whitespace: true }],
+            })(<Input />)}
             </Form.Item>
             
             <Form.Item {...tailFormItemLayout}>
