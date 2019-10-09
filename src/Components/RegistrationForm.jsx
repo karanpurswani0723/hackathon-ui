@@ -127,7 +127,102 @@ render() {
 
     return (
         <Form {...formItemLayout} onSubmit={this.handleSubmit}>
-            <Form.Item label="E-mail">
+            <Form.Item
+            label={
+                <span>
+                Account Number&nbsp;
+                <Tooltip title="Please Enter Account Number">
+                    <Icon type="user" />
+                </Tooltip>
+                </span>
+            }
+            >
+            {getFieldDecorator('accountNumber', {
+                rules: [{ required: true, message: 'Please Enter Account Number', whitespace: true }],
+            })(<Input />)}
+            </Form.Item>
+
+            <Form.Item
+            label={
+                <span>
+                User Name&nbsp;
+                <Tooltip title="Please Enter User Name">
+                    <Icon type="user" />
+                </Tooltip>
+                </span>
+            }
+            >
+            {getFieldDecorator('userName', {
+                rules: [{ required: true, message: 'Please Enter User Name', whitespace: true }],
+            })(<Input />)}
+            </Form.Item>
+
+            <Form.Item
+            label={
+                <span>
+                Electricity ID&nbsp;
+                <Tooltip title="Please Enter Electricity ID">
+                    <Icon type="thunderbolt" />
+                </Tooltip>
+                </span>
+            }
+            >
+            {getFieldDecorator('electricityID', {
+                rules: [{ required: true, message: 'Please Enter Electricity ID', whitespace: true }],
+            })(<Input />)}
+            </Form.Item>
+
+            <Form.Item label={
+                <span>
+                Contact Number&nbsp;
+                <Tooltip title="Please Enter Contact Number">
+                    <Icon type="tablet" />
+                </Tooltip>
+                </span>
+            }>
+            {getFieldDecorator('phone', {
+                rules: [{ required: true, message: 'Please input your contact number!' }],
+            })(<Input addonBefore={prefixSelector} style={{ width: '100%' }} />)}
+            </Form.Item>
+
+            <Form.Item
+            label={
+                <span>
+                Pan Card Number&nbsp;
+                <Tooltip title="Please Enter Pan Card Number">
+                    <Icon type="idcard" />
+                </Tooltip>
+                </span>
+            }
+            >
+            {getFieldDecorator('panCardNumber', {
+                rules: [{ required: true, message: 'Please Enter Pan Card Number', whitespace: true }],
+            })(<Input />)}
+            </Form.Item>
+
+            <Form.Item
+            label={
+                <span>
+                Gas Pipeline ID&nbsp;
+                <Tooltip title="Please Enter Gas Pipeline ID">
+                    <Icon type="fire" />
+                </Tooltip>
+                </span>
+            }
+            >
+            {getFieldDecorator('gasPipelineID', {
+                rules: [{ required: true, message: 'Please Enter Gas Pipeline ID', whitespace: true }],
+            })(<Input />)}
+            </Form.Item>
+
+            <Form.Item label={
+                <span>
+                Email&nbsp;
+                <Tooltip title="Please Enter Email ID">
+                    <Icon type="mail" />
+                </Tooltip>
+                </span>
+            }>
             {getFieldDecorator('email', {
                 rules: [
                 {
@@ -141,72 +236,7 @@ render() {
                 ],
             })(<Input />)}
             </Form.Item>
-            <Form.Item label="Password" hasFeedback>
-            {getFieldDecorator('password', {
-                rules: [
-                {
-                    required: true,
-                    message: 'Please input your password!',
-                },
-                {
-                    validator: this.validateToNextPassword,
-                },
-                ],
-            })(<Input.Password />)}
-            </Form.Item>
-            <Form.Item label="Confirm Password" hasFeedback>
-            {getFieldDecorator('confirm', {
-                rules: [
-                {
-                    required: true,
-                    message: 'Please confirm your password!',
-                },
-                {
-                    validator: this.compareToFirstPassword,
-                },
-                ],
-            })(<Input.Password onBlur={this.handleConfirmBlur} />)}
-            </Form.Item>
-            <Form.Item
-            label={
-                <span>
-                Nickname&nbsp;
-                <Tooltip title="What do you want others to call you?">
-                    <Icon type="question-circle-o" />
-                </Tooltip>
-                </span>
-            }
-            >
-            {getFieldDecorator('nickname', {
-                rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }],
-            })(<Input />)}
-            </Form.Item>
-            <Form.Item label="Habitual Residence">
-            {getFieldDecorator('residence', {
-                initialValue: ['zhejiang', 'hangzhou', 'xihu'],
-                rules: [
-                { type: 'array', required: true, message: 'Please select your habitual residence!' },
-                ],
-            })(<Cascader options={residences} />)}
-            </Form.Item>
-            <Form.Item label="Phone Number">
-            {getFieldDecorator('phone', {
-                rules: [{ required: true, message: 'Please input your phone number!' }],
-            })(<Input addonBefore={prefixSelector} style={{ width: '100%' }} />)}
-            </Form.Item>
-            <Form.Item label="Website">
-            {getFieldDecorator('website', {
-                rules: [{ required: true, message: 'Please input website!' }],
-            })(
-                <AutoComplete
-                dataSource={websiteOptions}
-                onChange={this.handleWebsiteChange}
-                placeholder="website"
-                >
-                <Input />
-                </AutoComplete>,
-            )}
-            </Form.Item>
+
             <Form.Item {...tailFormItemLayout}>
             {getFieldDecorator('agreement', {
                 valuePropName: 'checked',
