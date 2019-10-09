@@ -5,6 +5,7 @@ import WalletDetails from "./WalletDetails";
 import TransactionHistory from "./TransactionHistory";
 import TransactionForm from "./CreateTransaction";
 import OfferPage from "./OfferPage";
+import WrappedRegistrationForm from './RegistrationForm';
 
 const { Content } = Layout;
 
@@ -29,11 +30,22 @@ class CustomContent extends React.Component {
                 <Tabs.TabPane
                   tab={
                     <span>
+                      <Icon type="login" />
+                      Complete Registration
+                    </span>
+                  }
+                  key="1"
+                >
+                  <WrappedRegistrationForm />
+                </Tabs.TabPane>
+                <Tabs.TabPane
+                  tab={
+                    <span>
                       <Icon type="wallet" />
                       Wallet Details
                     </span>
                   }
-                  key="1"
+                  key="2"
                 >
                   <WalletDetails />
                 </Tabs.TabPane>
@@ -44,7 +56,7 @@ class CustomContent extends React.Component {
                       Transaction History
                     </span>
                   }
-                  key="2"
+                  key="3"
                 >
                   <TransactionHistory />
                 </Tabs.TabPane>
@@ -55,7 +67,7 @@ class CustomContent extends React.Component {
                       Make Transaction
                     </span>
                   }
-                  key="3"
+                  key="4"
                 >
                   <TransactionForm />
                 </Tabs.TabPane>
@@ -66,7 +78,7 @@ class CustomContent extends React.Component {
                       Offers
                     </span>
                   }
-                  key="4"
+                  key="5"
                 >
                   <OfferPage />
                 </Tabs.TabPane>

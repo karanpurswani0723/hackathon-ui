@@ -207,18 +207,6 @@ render() {
                 </AutoComplete>,
             )}
             </Form.Item>
-            <Form.Item label="Captcha" extra="We must make sure that your are a human.">
-            <Row gutter={8}>
-                <Col span={12}>
-                {getFieldDecorator('captcha', {
-                    rules: [{ required: true, message: 'Please input the captcha you got!' }],
-                })(<Input />)}
-                </Col>
-                <Col span={12}>
-                <Button>Get captcha</Button>
-                </Col>
-            </Row>
-            </Form.Item>
             <Form.Item {...tailFormItemLayout}>
             {getFieldDecorator('agreement', {
                 valuePropName: 'checked',

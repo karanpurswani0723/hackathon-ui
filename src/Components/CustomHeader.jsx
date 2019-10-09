@@ -39,50 +39,37 @@ class CustomHeader extends React.Component {
                 <Tabs.TabPane
                   tab={
                     <span style={{ color: "white" }}>
-                      <Icon type="logout" />
-                      Complete Registration
-                    </span>
-                  }
-                  key="2"
-                >
-                  <WrappedRegistrationForm />
-                </Tabs.TabPane>
-                <Tabs.TabPane
-                  tab={
-                    <span style={{ color: "white" }}>
-                      <Icon type="logout" />
+                      <Icon type="user" />
                       Logged In as {this.props.user.email}
                     </span>
                   }
                   key="2"
-                >
-                  {/* <WrappedRegistrationForm /> */}
-                </Tabs.TabPane>
+                />
               </Tabs>
             );
-          else
-            return (
-              <Tabs defaultActiveKey="1" style={{ padding: "16px" }}>
-                <Tabs.TabPane
-                  tab={<span style={{ color: "white" }}>CO2 Wallet</span>}
-                  key="1"
-                >
-                  <DisplayPage />
-                </Tabs.TabPane>
-                <Tabs.TabPane
-                  tab={
-                    <span style={{ color: "white" }}>
-                      <Icon type="login" />
-                      Sign In
-                    </span>
-                  }
-                  key="2"
-                >
-                  {/* <WrappedNormalLoginForm /> */}
-                  <UserForm />
-                </Tabs.TabPane>
-              </Tabs>
-            );
+        //   else
+        //     return (
+        //       <Tabs defaultActiveKey="1" style={{ padding: "16px" }}>
+        //         <Tabs.TabPane
+        //           tab={<span style={{ color: "white" }}>CO2 Wallet</span>}
+        //           key="1"
+        //         >
+        //           <DisplayPage />
+        //         </Tabs.TabPane>
+        //         <Tabs.TabPane
+        //           tab={
+        //             <span style={{ color: "white" }}>
+        //               <Icon type="login" />
+        //               Sign In
+        //             </span>
+        //           }
+        //           key="2"
+        //         >
+        //           {/* <WrappedNormalLoginForm /> */}
+        //           <UserForm />
+        //         </Tabs.TabPane>
+        //       </Tabs>
+        //     );
         })()}
       </Header>
     );

@@ -11,7 +11,7 @@ class CustomFooter extends React.Component{
     render(){
         return(
             <Footer>
-                <h3><b>Developed By Ctrl+Alt+Enter</b></h3>
+                <h3><b>Developed By Ctrl+Alt+Elite</b></h3>
             </Footer>
         );
     }
