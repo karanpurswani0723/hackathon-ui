@@ -36,9 +36,6 @@ class HomePage extends React.Component {
             userForm.setState({ user });
           });
         },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
         error => {
           alert("error2 " + error);
         }
@@ -48,7 +45,6 @@ class HomePage extends React.Component {
   render() {
     return (
       <Layout>
-        {/* {this.setState({loginStatus: true})} */}
         <CustomHeader
           loginStatus={this.state.loginStatus}
           user={this.state.user}
