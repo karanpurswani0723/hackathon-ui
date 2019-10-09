@@ -11,7 +11,7 @@ class OfferPage extends React.Component {
     }
   
     componentDidMount() {
-      fetch("C:/Users/Dell/Desktop/test")
+      fetch("file:///C:/Users/Dell/Desktop/test")
         .then(res => res.json())
         .then(
           (result) => {
