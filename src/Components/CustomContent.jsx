@@ -4,6 +4,7 @@ import DisplayPage from './DisplayPage';
 import WalletContents from './WalletContents';
 import TransactionContents from './TransactionContents';
 import TransactionForm from './CreateTransaction';
+import OfferPage from './OfferPage';
 
 const { Content } = Layout;
 
@@ -31,6 +32,9 @@ class CustomContent extends React.Component{
                                 </Tabs.TabPane>
                                 <Tabs.TabPane tab={<span><Icon type="credit-card" />Make Transaction</span>} key="3">
                                     <TransactionForm />
+                                </Tabs.TabPane>
+                                <Tabs.TabPane tab={<span><Icon type="tags" />Offers</span>} key="4">
+                                    <OfferPage />
                                 </Tabs.TabPane>
                             </Tabs>
                         );

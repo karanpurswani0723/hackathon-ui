@@ -9,7 +9,7 @@ class HomePage extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            loginStatus: false
+            loginStatus: true
         }
     }
 

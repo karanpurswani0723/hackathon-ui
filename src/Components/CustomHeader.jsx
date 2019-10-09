@@ -5,6 +5,7 @@ import DisplayPage from './DisplayPage';
 import WrappedNormalLoginForm from './NormalLoginForm';
 import WrappedRegistrationForm from './RegistrationForm';
 import HomePage from './HomePage';
+import UserForm from './UserForm';
 
 const { Header } = Layout;
 
@@ -20,7 +21,7 @@ class CustomHeader extends React.Component{
     handleSignOut(){
         console.log("sign out done");
         this.setState({loginStatus: false});
-        return <HomePage />
+        this.render(<HomePage loginStatus={this.state.loginStatus}/>);
     }
 
     render(){
@@ -42,7 +43,8 @@ class CustomHeader extends React.Component{
                                         <DisplayPage />
                                     </Tabs.TabPane>
                                     <Tabs.TabPane  tab={<span style={{ color : 'white' }}><Icon type="login" />Sign In</span>} key="2">
-                                        <WrappedNormalLoginForm />
+                                        {/* <WrappedNormalLoginForm /> */}
+                                        <UserForm />
                                     </Tabs.TabPane>
                                     <Tabs.TabPane tab={<span style={{ color : 'white' }}><Icon type="plus-circle-o" />Create Account</span>} key="3">
                                         <WrappedRegistrationForm />
