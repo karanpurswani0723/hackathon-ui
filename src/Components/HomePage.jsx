@@ -11,7 +11,7 @@ class HomePage extends React.Component {
       firstName: "",
       lastName: "",
       email: "",
-      mobileNumber: ""
+      mobileNumber: "",
     },
     loginStatus: true
   };
