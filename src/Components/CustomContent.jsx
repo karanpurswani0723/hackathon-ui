@@ -13,8 +13,9 @@ class CustomContent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loginStatus: props.loginStatus,
-      user: props.user
+        registeredFlag: props.user.registeredFlag,
+        loginStatus: props.loginStatus,
+        user: props.user
     };
     console.log(this.state);
   }
@@ -24,20 +25,9 @@ class CustomContent extends React.Component {
       <Content style={{ height: "calc(90vh - 55px)" }}>
         {console.log(this.state.loginStatus)}
         {(() => {
-          if (this.state.loginStatus)
+          if (this.state.registeredFlag)
             return (
               <Tabs defaultActiveKey="1" style={{ padding: "16px" }}>
-                <Tabs.TabPane
-                  tab={
-                    <span>
-                      <Icon type="login" />
-                      Complete Registration
-                    </span>
-                  }
-                  key="1"
-                >
-                  <WrappedRegistrationForm />
-                </Tabs.TabPane>
                 <Tabs.TabPane
                   tab={
                     <span>
@@ -45,7 +35,7 @@ class CustomContent extends React.Component {
                       Wallet Details
                     </span>
                   }
-                  key="2"
+                  key="1"
                 >
                   <WalletDetails />
                 </Tabs.TabPane>
@@ -56,7 +46,7 @@ class CustomContent extends React.Component {
                       Transaction History
                     </span>
                   }
-                  key="3"
+                  key="2"
                 >
                   <TransactionHistory />
                 </Tabs.TabPane>
@@ -67,7 +57,7 @@ class CustomContent extends React.Component {
                       Make Transaction
                     </span>
                   }
-                  key="4"
+                  key="3"
                 >
                   <TransactionForm />
                 </Tabs.TabPane>
@@ -78,13 +68,71 @@ class CustomContent extends React.Component {
                       Offers
                     </span>
                   }
-                  key="5"
+                  key="4"
                 >
                   <OfferPage />
                 </Tabs.TabPane>
               </Tabs>
             );
-          else return <DisplayPage />;
+          else return (
+            <Tabs defaultActiveKey="1" style={{ padding: "16px" }}>
+              <Tabs.TabPane
+                tab={
+                  <span>
+                    <Icon type="login" />
+                    Complete Registration
+                  </span>
+                }
+                key="1"
+              >
+                <WrappedRegistrationForm />
+              </Tabs.TabPane>
+              <Tabs.TabPane
+                tab={
+                  <span>
+                    <Icon type="wallet" />
+                    Wallet Details
+                  </span>
+                }
+                key="2"
+              >
+                <WalletDetails />
+              </Tabs.TabPane>
+              <Tabs.TabPane
+                tab={
+                  <span>
+                    <Icon type="calendar" />
+                    Transaction History
+                  </span>
+                }
+                key="3"
+              >
+                <TransactionHistory />
+              </Tabs.TabPane>
+              <Tabs.TabPane
+                tab={
+                  <span>
+                    <Icon type="credit-card" />
+                    Make Transaction
+                  </span>
+                }
+                key="4"
+              >
+                <TransactionForm />
+              </Tabs.TabPane>
+              <Tabs.TabPane
+                tab={
+                  <span>
+                    <Icon type="tags" />
+                    Offers
+                  </span>
+                }
+                key="5"
+              >
+                <OfferPage />
+              </Tabs.TabPane>
+            </Tabs>
+          );
         })()}
       </Content>
     );
