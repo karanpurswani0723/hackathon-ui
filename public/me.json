@@ -1,0 +1,30 @@
+[
+  {
+    "access_token": "EAAGzeEw5YbwBAAb4iDjs1IHfb0ZC6JqGYtyx6mAmc0vcTZCCJ4PQ0UxPZCb9Wk4xx6ZAdEPoRVyQTCOmFXnn5gjBwqHxR1I7WSvEGotMtZAW8PZCbSVrONflcmZBr5ld4ABYGPumNElxayCUKOugFKoTNHZBP8zKo9EZD",
+    "expires_on": "2019-12-07T18:02:50.3986255Z",
+    "provider_name": "facebook",
+    "user_claims": [
+      {
+        "typ": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier",
+        "val": "10158998429044746"
+      },
+      {
+        "typ": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
+        "val": "akhilgupta01@gmail.com"
+      },
+      {
+        "typ": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+        "val": "Akhil Gupta"
+      },
+      {
+        "typ": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname",
+        "val": "Akhil"
+      },
+      {
+        "typ": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname",
+        "val": "Gupta"
+      }
+    ],
+    "user_id": "akhilgupta01@gmail.com"
+  }
+]
