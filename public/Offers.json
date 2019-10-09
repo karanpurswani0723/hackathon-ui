@@ -1,0 +1,66 @@
+[
+    {
+        "offerId": 5325,
+        "offerName": "Insider",
+        "offerDescription": " 10 percent off on bookings",
+        "validity": "3919-12-02T18:30:00.000+0000",
+        "offerValue": 50,
+        "creditRating": 100
+    },
+    {
+        "offerId": 5479,
+        "offerName": "SolarEnergy.in",
+        "offerDescription": " Free Servicing ",
+        "validity": "3919-12-09T18:30:00.000+0000",
+        "offerValue": 50,
+        "creditRating": 100
+    },
+    {
+        "offerId": 7770,
+        "offerName": "BioBags",
+        "offerDescription": "10 percent off ",
+        "validity": "3919-12-19T18:30:00.000+0000",
+        "offerValue": 100,
+        "creditRating": 200
+    },
+    {
+        "offerId": 2810,
+        "offerName": "BioBags",
+        "offerDescription": " Free Servicing ",
+        "validity": "3919-12-06T18:30:00.000+0000",
+        "offerValue": 50,
+        "creditRating": 100
+    },
+    {
+        "offerId": 2143,
+        "offerName": "SolarEnergy.in",
+        "offerDescription": " Free Servicing ",
+        "validity": "3919-12-19T18:30:00.000+0000",
+        "offerValue": 50,
+        "creditRating": 100
+    },
+    {
+        "offerId": 9399,
+        "offerName": "Insider",
+        "offerDescription": "2 Free Tickets for latest movies ",
+        "validity": "3919-11-30T18:30:00.000+0000",
+        "offerValue": 250,
+        "creditRating": 500
+    },
+    {
+        "offerId": 5289,
+        "offerName": "Insider",
+        "offerDescription": " 20 percent off on bookings",
+        "validity": "3919-12-13T18:30:00.000+0000",
+        "offerValue": 100,
+        "creditRating": 200
+    },
+    {
+        "offerId": 7108,
+        "offerName": "Insider",
+        "offerDescription": " 20 percent off on bookings",
+        "validity": "3919-12-18T18:30:00.000+0000",
+        "offerValue": 100,
+        "creditRating": 200
+    }
+]

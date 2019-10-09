@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card, Row, Col, Button, Layout } from 'antd';
 
 class OfferPage extends React.Component {
     constructor(props) {
@@ -9,20 +10,17 @@ class OfferPage extends React.Component {
         items: []
       };
     }
-  
+
     componentDidMount() {
-      fetch("file:///C:/Users/Dell/Desktop/test")
+      fetch("/Offers.json")
         .then(res => res.json())
         .then(
           (result) => {
             this.setState({
               isLoaded: true,
-              items: result.items
+              items: result
             });
           },
-          // Note: it's important to handle errors here
-          // instead of a catch() block so that we don't swallow
-          // exceptions from actual bugs in components.
           (error) => {
             this.setState({
               isLoaded: true,
@@ -40,13 +38,27 @@ class OfferPage extends React.Component {
         return <div>Loading...</div>;
       } else {
         return (
-          <ul>
-            {items.map(item => (
-              <li key={item.name}>
-                {item.name} {item.price}
-              </li>
-            ))}
-          </ul>
+            <center>
+                <div style={{ background: '#ECECEC', padding: '30px' }}>
+                    <Row gutter={16}>
+                    {this.state.items.map(item=>(                        
+                        <Col span={8} style={{marginTop: 16}}>
+                            <Card title={item.offerName} bordered={true}>
+                                <Layout>
+                                    <p>Offer Description : {item.offerDescription}</p>
+                                    <p>Offer Validity : {item.validity}</p>
+                                    <p>Offer Value : {item.offerValue}</p>
+                                    <p>Credit Rating : {item.creditRating}</p>
+                                    <Button type="primary" htmlType="submit">
+                                        Claim Offer
+                                    </Button>
+                                </Layout>
+                            </Card>
+                        </Col>
+                    ))}
+                    </Row>
+                </div>
+            </center>
         );
       }
     }

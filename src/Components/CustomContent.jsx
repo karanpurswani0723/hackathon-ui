@@ -1,8 +1,8 @@
 import React from 'react';
 import { Tabs, Icon, Layout } from 'antd';
 import DisplayPage from './DisplayPage';
-import WalletContents from './WalletContents';
-import TransactionContents from './TransactionContents';
+import WalletDetails from './WalletDetails';
+import TransactionHistory from './TransactionHistory';
 import TransactionForm from './CreateTransaction';
 import OfferPage from './OfferPage';
 
@@ -25,10 +25,10 @@ class CustomContent extends React.Component{
                         return(
                             <Tabs defaultActiveKey="1" style={{ padding: '16px' }}>
                                 <Tabs.TabPane tab={<span><Icon type="wallet" />Wallet Details</span>} key="1">
-                                    <WalletContents />
+                                    <WalletDetails />
                                 </Tabs.TabPane>
                                 <Tabs.TabPane tab={<span><Icon type="calendar" />Transaction History</span>} key="2">
-                                    <TransactionContents />
+                                    <TransactionHistory />
                                 </Tabs.TabPane>
                                 <Tabs.TabPane tab={<span><Icon type="credit-card" />Make Transaction</span>} key="3">
                                     <TransactionForm />

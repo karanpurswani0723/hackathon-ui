@@ -33,7 +33,9 @@ class CustomHeader extends React.Component{
                             return(
                                 <Tabs defaultActiveKey="1" style={{ padding: '16px' }}>
                                     <Tabs.TabPane  tab={<span style={{ color : 'white' }}>CO2 Wallet</span>} key="1" />                
-                                    <Tabs.TabPane  tab={<span style={{ color : 'white' }}><Icon type="logout" />Sign Out</span>} key="2" onTabClick={this.handleSignOut}/>
+                                    <Tabs.TabPane  tab={<span style={{ color : 'white' }}><Icon type="logout" />Complete Registration</span>} key="2">
+                                        <WrappedRegistrationForm />
+                                    </Tabs.TabPane>
                                 </Tabs>
                             );
                         else
@@ -45,9 +47,6 @@ class CustomHeader extends React.Component{
                                     <Tabs.TabPane  tab={<span style={{ color : 'white' }}><Icon type="login" />Sign In</span>} key="2">
                                         {/* <WrappedNormalLoginForm /> */}
                                         <UserForm />
-                                    </Tabs.TabPane>
-                                    <Tabs.TabPane tab={<span style={{ color : 'white' }}><Icon type="plus-circle-o" />Create Account</span>} key="3">
-                                        <WrappedRegistrationForm />
                                     </Tabs.TabPane>
                                 </Tabs>
                             );
