@@ -1,20 +1,16 @@
-import React from 'react';
-import { Tabs, Icon, Layout } from 'antd';
+import React from "react";
+import { Tabs, Icon, Layout } from "antd";
 
 const { Footer } = Layout;
 
-class CustomFooter extends React.Component{
-    constructor(props){
-        super(props);
-    }
+class CustomFooter extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-    render(){
-        return(
-            <Footer>
-                <h3><b>Developed By Ctrl+Alt+Elite</b></h3>
-            </Footer>
-        );
-    }
+  render() {
+    return <Footer></Footer>;
+  }
 }
 
 export default CustomFooter;

@@ -68,7 +68,6 @@ class RegistrationForm extends React.Component {
   };
 
   handleSubmit = e => {
-    alert("handleSubmit");
     e.preventDefault();
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
@@ -176,7 +175,7 @@ class RegistrationForm extends React.Component {
 
     return (
       <Form {...formItemLayout} onSubmit={this.handleSubmit}>
-        <Form.Item
+        {/* <Form.Item
           label={
             <span>
               Account Number&nbsp;
@@ -196,7 +195,7 @@ class RegistrationForm extends React.Component {
             ],
             onChange: this.handleSelectChange
           })(<Input />)}
-        </Form.Item>
+        </Form.Item> */}
 
         <Form.Item
           label={
