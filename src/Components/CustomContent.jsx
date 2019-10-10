@@ -58,7 +58,7 @@ class CustomContent extends React.Component {
                   }
                   key="3"
                 >
-                  <TransactionHistory />
+                  <TransactionHistory user = {this.state.user.email} />
                 </Tabs.TabPane>
                 <Tabs.TabPane
                   tab={
