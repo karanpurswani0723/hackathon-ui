@@ -83,12 +83,12 @@ class WalletDetails extends React.Component {
                             
                             <Layout style={{marginTop: 8}}>
                                 {/* <Icon type="wallet" /> */}
-                                <h3>Gas Pipeline ID : {item.gasPipelineID}</h3>
+                                <h3>Gas Pipeline ID : {item.gasPipelineId}</h3>
                             </Layout>
 
                             <Layout style={{marginTop: 8}}>
                                 {/* <Icon type="wallet" /> */}
-                                <h3>Email ID : {item.emailID}</h3>
+                                <h3>Email ID : {item.emailId}</h3>
                             </Layout>
                         </Card>
                     </center>

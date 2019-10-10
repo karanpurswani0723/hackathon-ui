@@ -14,7 +14,8 @@ class CustomHeader extends React.Component {
     super(props);
     this.state = {
       loginStatus: this.props.loginStatus,
-      user: this.props.user
+      user: this.props.user,
+      accountNumber: 1570650001142
     };
     this.handleSignOut = this.handleSignOut.bind(this);
   }
@@ -28,10 +29,7 @@ class CustomHeader extends React.Component {
   render() {
     return (
       <Header className="Header">
-        {(() => {
-          if (this.state.loginStatus)
-            return (
-              <Tabs defaultActiveKey="1" style={{ padding: "16px" }}>
+          <Tabs defaultActiveKey="1" style={{ padding: "16px" }}>
                 <Tabs.TabPane
                   tab={<span style={{ color: "white" }}>CO2 Wallet</span>}
                   key="1"
@@ -45,33 +43,8 @@ class CustomHeader extends React.Component {
                   }
                   key="2"
                 />
-              </Tabs>
-            );
-        //   else
-        //     return (
-        //       <Tabs defaultActiveKey="1" style={{ padding: "16px" }}>
-        //         <Tabs.TabPane
-        //           tab={<span style={{ color: "white" }}>CO2 Wallet</span>}
-        //           key="1"
-        //         >
-        //           <DisplayPage />
-        //         </Tabs.TabPane>
-        //         <Tabs.TabPane
-        //           tab={
-        //             <span style={{ color: "white" }}>
-        //               <Icon type="login" />
-        //               Sign In
-        //             </span>
-        //           }
-        //           key="2"
-        //         >
-        //           {/* <WrappedNormalLoginForm /> */}
-        //           <UserForm />
-        //         </Tabs.TabPane>
-        //       </Tabs>
-        //     );
-        })()}
-      </Header>
+            </Tabs>
+        </Header>
     );
   }
 }

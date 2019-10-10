@@ -13,17 +13,35 @@ class CustomContent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        registeredFlag: props.user.registeredFlag,
-        loginStatus: props.loginStatus,
-        user: props.user
+        user: props.user,
+        registeredFlag: false
     };
-    console.log(this.state);
+   
+  }
+
+  componentDidMount() {
+    const userForm = this;
+    let { user } = this.state;
+    const emailId = this.state.user.email
+    fetch("https://transaction-core.azurewebsites.net/api/mongo/user/getUserByEmailId/akhilgupta01@gmail.com")
+      .then(res => res.json())
+      .then(
+        function(result) {
+          if(result!=null){
+              console.log(result)
+          }
+        },
+        error => {
+            user.registeredFlag = false
+            alert("error2 " + error);
+        }
+      ); 
   }
 
   render() {
     return (
       <Content style={{ height: "calc(90vh - 55px)" }}>
-        {console.log(this.state.loginStatus)}
+       
         {(() => {
           if (this.state.registeredFlag)
             return (

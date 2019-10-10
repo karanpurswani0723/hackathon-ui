@@ -12,9 +12,7 @@ class HomePage extends React.Component {
       lastName: "",
       email: "",
       mobileNumber: "",
-      registeredFlag: false
     },
-    loginStatus: true
   };
 
   componentWillMount() {
@@ -39,21 +37,6 @@ class HomePage extends React.Component {
         },
         error => {
           alert("error2 " + error);
-        }
-      );
-
-    const emailId = this.state.user.email
-    fetch("https://transaction-core.azurewebsites.net/api/mongo/user/getUserByEmailId/"+emailId)
-      .then(res => res.json())
-      .then(
-        result => {
-          if(result){
-              user.registeredFlag = true
-          }
-        },
-        error => {
-            user.registeredFlag = false
-            alert("error2 " + error);
         }
       );
   }
